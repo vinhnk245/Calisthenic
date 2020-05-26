@@ -1,0 +1,90 @@
+CREATE TABLE category
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Name TEXT
+)
+
+CREATE TABLE post
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Title TEXT,
+    Content TEXT,
+    ShortContent TEXT,
+    LinkYoutube TEXT,
+    Image TEXT,
+    CategoryID INT,
+    FOREIGN KEY (CategoryID) REFERENCES category(ID)
+)
+
+CREATE TABLE `user`
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Account TEXT,
+    Pass TEXT,
+    Username TEXT,
+    Email TEXT,
+    Type INT
+)
+
+CREATE TABLE exercise
+(
+ 	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Name varchar(100),
+    UrlYT TEXT
+)
+
+CREATE TABLE Level
+(
+	ID INT PRIMARY KEY AUTO_INCREMENT
+)
+
+CREATE TABLE training
+(
+    LevelID INT,
+    Day INT,
+    ExerciseID INT,
+    `Set` INT,
+    `Rep` INT,
+    BreakTime TEXT,
+    FOREIGN KEY (ExerciseID) REFERENCES exercise(ID),
+    FOREIGN KEY (LevelID) REFERENCES `level`(ID),
+    PRIMARY KEY (LevelID, Day, ExerciseID)
+)
+
+
+
+CREATE TABLE progress_training
+(
+    UserID INT,
+    LevelID INT,
+    DayTrained INT,
+    FOREIGN KEY (UserID) REFERENCES `user`(ID), 
+    FOREIGN KEY (LevelID) REFERENCES `level`(ID),
+    PRIMARY KEY (UserID, LevelID)
+)
+
+
+INSERT INTO `exercise` (`ID`, `Name`, `UrlYT`) VALUES (NULL, 'Jumping Jacks', 'iSSAk4XCsRA');
+INSERT INTO `exercise` (`ID`, `Name`, `UrlYT`) VALUES (NULL, 'Push-Up', 'wxhNoKZlfY8'), (NULL, 'Diamond Push-Up', 'J0DnG1_S92I'), (NULL, 'Clapping Push-Up', 'EYwWCgM198U');
+INSERT INTO `exercise` (`ID`, `Name`, `UrlYT`) VALUES (NULL, 'Pull-Up', 'XB_7En-zf_M'), (NULL, 'Chin-Up', 'b-ztMQpj8yc'), (NULL, 'Wide Grip Chin-Up', 'w_PxgjPlU6s'), (NULL, 'Wide Grip Pull-Up', 'iywjqUo5nmU');
+INSERT INTO `exercise` (`ID`, `Name`, `UrlYT`) VALUES (NULL, 'Close Grip Pull-Up', 'j--ftfgTL5I'), (NULL, 'Close Grip Chin-up', '6bTcFTRoqcw');
+INSERT INTO `exercise` (`ID`, `Name`, `UrlYT`) VALUES (NULL, 'Superman Push-up', '6iam4u23zuM'), (NULL, 'High Knee', 'oDdkytliOqE'), (NULL, 'Archer Push-Up', 'h_1-gJEaksI'), (NULL, 'Hindu Push-Up', 'I-KWxLXWBN0'), (NULL, 'Planche', 'UZ-1jwG7aQ4');
+INSERT INTO `exercise` (`ID`, `Name`, `UrlYT`) VALUES (NULL, 'One Arm Push-Up', 'JiHkxqbhNuw');
+INSERT INTO `exercise` (`ID`, `Name`, `UrlYT`) VALUES (NULL, 'Crunches', 'Xyd_fa5zoEU'), (NULL, 'Cross Arm Crunches', 'wgaIH-0rvQw'), (NULL, 'Russian Twist', 'wkD8rjkodUI'), (NULL, 'Mountain Climber', 'nmwgirgXLYM'), (NULL, 'Plank', 'pSHjTRCQxIw'), (NULL, 'Flutter Kicks', 'ANVdMDaYRts'), (NULL, 'Clapping Crunches', 'moaZFyRi0sM');
+INSERT INTO `exercise` (`ID`, `Name`, `UrlYT`) VALUES (NULL, 'Triple Clap Push-Up', '0hfmJaydq4o'), (NULL, 'Butt Bridge', '8bbE64NuDTU'), (NULL, 'V-Up', 'iP2fjvG0g3w'), (NULL, 'Reverse Crunches', 'hyv14e2QDq0');
+
+
+INSERT INTO `level` (`ID`) VALUES (NULL);
+INSERT INTO `level` (`ID`) VALUES (NULL);
+INSERT INTO `level` (`ID`) VALUES (NULL);
+
+--LEVEL 1
+--ngay 1
+INSERT INTO `training` (`LevelID`, `Day`, `ExerciseID`, `Set`, `Rep`, `BreakTime`) VALUES ('1', '1', '1', '30', '1', '30 giây'), ('1', '1', '12', '1', '50', '30 giây');
+INSERT INTO `training` (`LevelID`, `Day`, `ExerciseID`, `Set`, `Rep`, `BreakTime`) VALUES ('1', '1', '2', '2', '10', '30 giây '), ('1', '1', '3', '3', '5', '30 giây');
+
+--ngay2
+INSERT INTO `training` (`LevelID`, `Day`, `ExerciseID`, `Set`, `Rep`, `BreakTime`) VALUES ('1', '2', '1', '1', '30', '30s'), ('1', '2', '12', '50', '1', '30s'), ('1', '2', '17', '2', '10', '30s'), ('1', '2', '23', '2', '6', '30s'), ('1', '2', '21', '1', '60', '30s');
+
+--cateogry
+INSERT INTO `category` (`ID`, `Name`) VALUES (NULL, 'bicep'), (NULL, 'tricep'), (NULL, 'forearms'), (NULL, 'shoulder'), (NULL, 'abs'), (NULL, 'cardio'), (NULL, 'chest'), (NULL, 'back'), (NULL, 'leg'), (NULL, 'nutrition');

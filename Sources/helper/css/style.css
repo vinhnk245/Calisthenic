@@ -1,0 +1,840 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%) !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+.hide {
+    display: none ;
+}
+
+.show {
+    display: block ;
+}
+
+.cursorPointer:hover {
+    cursor: pointer;
+}
+
+
+::selection
+{
+  background: #86592d;
+  color: #FFF;
+}
+
+a:focus {
+    box-shadow: none !important;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* SLIDE & HOME*/
+
+.dropdown-item-border {
+    border-top: 1px solid #e0e0d1 !important;
+}
+
+.padding-item {
+    padding: 8px 0px !important;
+}
+
+.dropdown-menu {
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #fff !important;
+  text-decoration: none !important;
+  background-color: #ff8533 !important;
+  border-left: 15px solid #cc5200;
+}
+
+.btnLoginBeforeTrain {
+    margin-bottom: 2%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.btnManager {
+    height: 45px;
+}
+
+#nameCompanyMenu {
+    font-family: Impact;
+    font-size: 25px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.menuHead {
+    background-color: #000 !important;
+    box-shadow: 0 0 3px 0 #004d4d;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.3em;
+    color: white !important;
+}
+
+.btnHome a {
+    font-size: 13px;
+}
+
+@media (min-width: 576px) {
+    .button {
+        display: inline-block;
+        padding: 0.5em;
+        background-color: #008060;
+        color: white !important;
+    }
+
+    .btnHome a {
+        font-size: 16px;
+    }
+
+    .btnLoginBeforeTrain {
+        margin-bottom: 2%;
+        margin-left: 40%;
+    }
+}
+
+@media (min-width: 768px) {
+    .button {
+        display: inline-block;
+        padding: 0.3em;
+        background-color: #008060;
+        color: white !important;
+    }
+
+    .btnHome a {
+        font-size: 30px !important;
+        font-family: Agency FB;
+    }
+
+    .btnLoginBeforeTrain {
+        margin-bottom: 2%;
+        margin-right: 40%;
+    }
+}
+
+.heightRowLoginSignUp span {
+    text-align: center;
+    color: #fff;
+}
+
+.btnLoginHome {
+    color: #ffa64d !important;
+}
+
+.btnSignUpHome {
+    color: #fff !important;
+    font-size: 15px;
+}
+
+.btnHome .training {
+    text-align: center;
+    background: linear-gradient(to right, #330000, #800000);
+    border-radius: 40px 0 0 40px;
+}
+
+.btnHome .healthy {
+    text-align: center;
+    background: linear-gradient(-90deg, #001a1a, #004d4d);
+    border-radius: 0 40px 40px 0;
+}
+
+#activeSlideHome {
+    background: none;
+}
+
+.btnSlideHome {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+
+.bgHome {
+    z-index: 2;
+}
+
+/* SLIDE HOME */
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/*  BLUR FORM LOG IN & SIGN UP  */
+
+.bg-image {
+    height: 100px;
+    background-image: url("../../image/test/twoplank.jpg");
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0.4, 0.4, 0.4, 0.4);
+    /* Black w/opacity/see-through */
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center !important;
+    height: 480px;
+    width: 340px;
+    background: linear-gradient(45deg, rgb(153, 0, 0) 0%, rgb(128, 0, 96) 100%) !important;
+    opacity: 0.6;
+    border-radius: 10px;
+
+
+
+    /* animation w3shools*/
+    -webkit-animation-name: example;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes example {
+    from {
+        top: 0%;
+    }
+
+    to {
+        top: 50%;
+    }
+}
+
+@keyframes example {
+    from {
+        top: 0%;
+    }
+
+    to {
+        top: 50%;
+    }
+}
+
+/* animation w3shools*/
+
+
+
+.txtLogin input {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid #ff8080 !important;
+    background: 0 0 !important;
+    background-color: initial;
+    border-radius: 0;
+    color: white !important;
+    transition: none !important;
+    margin: 0 auto;
+    position: relative;
+}
+
+#txtLogin .form-control::placeholder {
+    color: white !important;
+    opacity: 0.6;
+}
+
+.iconUserNameLogin {
+    top: 175px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconPasswordLogin {
+    top: 222px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconEmailSignUp {
+    top: 134px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconFullNameSignUp {
+    top: 181px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconUserNameSignUp {
+    top: 228px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconPasswordSignUp {
+    top: 275px;
+    position: absolute;
+    right: 40px;
+}
+
+.iconConfirmPasswordSignUp {
+    top: 322px;
+    position: absolute;
+    right: 40px;
+}
+
+.btnSignUp {
+    border-radius: 18px !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    background-color: #00bfff !important;
+}
+
+.btnLogin {
+    border-radius: 18px !important;
+    color: #009900 !important;
+    font-weight: bold !important;
+    background-color: white !important;
+}
+
+.linkSignUp {
+    text-decoration: none !important;
+    color: #00bfff !important;
+}
+
+.forgot-pass {
+    color: #ffccb3;
+    font-size: 13px;
+}
+
+.forgot-pass:hover {
+    transition: 1s;
+    color: #fff;
+}
+
+.bg-text p {
+    font-size: 12px !important;
+}
+
+p a {
+    font-weight: bolder;
+}
+
+
+/*  BLUR FORM LOG IN & SIGN UP  */
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* CATEGORY BODY */
+
+
+.rowCategory a {
+    padding-top: 170px;
+    font-family: Agency FB;
+    font-size: 50px;
+}
+
+.cellCategory {
+    height: 400px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+.rowCategory .cellCategory:hover {
+    z-index: 1;
+    opacity: 1;
+    box-shadow: 0 0 10px 0 #b30000;
+}
+
+#abs {
+    background-image: url("../../image/ImageCategory/abs.jpg");
+}
+
+#bicep {
+    background-image: url("../../image/ImageCategory/bicep.jpg");
+}
+
+#tricep {
+    background-image: url("../../image/ImageCategory/tricep.jpg");
+}
+
+#leg {
+    background-image: url("../../image/ImageCategory/leg.jpg");
+}
+
+#chest {
+    background-image: url("../../image/ImageCategory/chest.jpg");
+}
+
+#shoulder {
+    background-image: url("../../image/ImageCategory/shoulder.jpg");
+}
+
+#back {
+    background-image: url("../../image/ImageCategory/back.jpg");
+}
+
+#forearms {
+    background-image: url("../../image/ImageCategory/forearms.jpg");
+}
+
+#cardio {
+    background-image: url("../../image/ImageCategory/cardio.jpg");
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+/* CONTACT & FOOTER */
+
+.footer {
+    height: auto;
+    background-color: #222;
+    color: #fff;
+}
+
+.main-founder {
+    color: #fff;
+    background-color: #222c37;
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.content-info a:hover {
+    color: #666 !important;
+}
+
+.content-info a i {
+    font-size: 24px;
+}
+
+.main-founder h2 {
+    margin: 10px 0 40px;
+}
+
+.card-wrapper .avatar {
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 180px;
+    width: 180px;
+}
+
+.avatar-circle:hover {
+    border: 2px solid teal;
+}
+
+.avatar-xxlg {
+    width: 180px;
+    height: 180px;
+}
+
+.avatar-circle {
+    border: 2px solid rgba(128, 0, 128, .5);
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.content-info {
+    margin-bottom: 50px;
+}
+
+.content-info>p,
+b {
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+.content-info>p>a {
+    transition: .2s ease-out;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .offsetInfo {
+        margin-left: 13.433333%;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+/* TRAINING */
+
+.textSelectedDay {
+    padding-top: 80px;
+}
+
+.headerTraining {
+    width: 100%;
+    position: relative;
+}
+
+.btnGroupDay {
+    position: absolute;
+    top: 60%;
+}
+
+.btn-group-lg>.btn {
+    border-radius: 0 !important;
+}
+
+.backNext a {
+    font-size: 25px;
+    color: #004d4d;
+    cursor: pointer;
+}
+
+.backNext i:hover {
+    transition: 1s;
+    color: #17a2b8;
+}
+
+.btnFinishTraining {
+    font-size: 40px;
+    color: #009933;
+}
+
+.btnFinishTraining:hover {
+    transition: 1s;
+    color: #00ff80;
+}
+
+
+@media (min-width: 576px) {
+    .headerTraining {
+        background-image: url("../../image/background/bg-training.jpg");
+        height: 450px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 450px;
+    }
+
+    .textSelectedDay {
+        padding-top: 0px;
+    }
+
+    .btnGroupDay {
+        position: absolute;
+        top: 89%;
+    }
+
+    .backNext a {
+        font-size: 30px;
+    }
+
+    .btnFinishTraining {
+        font-size: 50px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .headerTraining {
+        background-image: url("../../image/background/bg-training.jpg");
+        height: 600px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 800px;
+    }
+
+    .textSelectedDay {
+        padding-top: 0px;
+    }
+
+    .btnGroupDay {
+        position: absolute;
+        top: 92%;
+    }
+
+    .backNext a {
+        font-size: 40px;
+    }
+
+    .btnFinishTraining {
+        font-size: 70px;
+    }
+
+}
+
+.btnGroupDay button {
+    background: #004d4d;
+    color: white;
+}
+
+.btnGroupDay button:hover {
+    background: #1a8cff;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+/*   POPUP SELECT LEVEL  */
+
+#modalLevel {
+    padding-left: 17px;
+    font-family: Agency FB;
+}
+
+.result {
+    border-top: 1px solid gray;
+    font-size: 15px;
+}
+
+.selectLevel {
+    height: 100px;
+    padding-top: 2rem;
+    font-size: 30px;
+}
+
+.level1 {
+    background: linear-gradient(#003333, #006666) !important;
+    border-radius: 10px 0 0 10px;
+}
+
+.level2 {
+    background: linear-gradient(#33001a, #99004d) !important;
+}
+
+.level3 {
+    background: linear-gradient(#002233, #004466) !important;
+    border-radius: 0 10px 10px 0;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+/*   POST   */
+
+.video-detail-post {
+    box-shadow: -10px 10px 0px 0px #003333;
+    border: none;
+    height: 250px;
+    width:100%;
+    border-radius: 6px;
+}
+
+.btn-detail {
+    padding: 3% 10%;
+    position: relative;
+    bottom: -8px;
+    float: right;
+    right: 3%;
+    /*left: 65%;*/
+}
+
+.card-title {
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.card-text {
+    padding-left: 5px;
+}
+
+.colorPost {
+    background-color: #222;
+    color: #fff;
+}
+
+
+@media (min-width: 576px) {
+    
+    .video-detail-post{
+        box-shadow: -13px 13px 0px 0px #003333;
+        height: 350px;
+    }
+}
+
+
+@media (min-width: 900px) {
+    
+    .video-detail-post{
+        box-shadow: -18px 18px 0px 0px #003333;
+        height: 500px;
+    }
+
+}
+
+
+
+/*----------------------------------------------------------------------------------------*/
+/* BACK TO TOP */
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(232, 98, 86, 0.8) url(../../image/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+  transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+}
+
+.cd-top.cd-top--show,
+.cd-top.cd-top--fade-out,
+.cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+}
+
+.cd-top.cd-top--show {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: .5;
+  z-index: 1;
+}
+
+.cd-top.cd-top--fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+
+.cd-top:hover {
+  transition: 0.5s;
+  background-color: #e86256;
+  opacity: 1;
+  box-shadow: 0px 0px 10px 1px #ff884d;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+/*   PROFILE EDIT  */
+
+
+.table-radius input:focus{
+    box-shadow: 0px 0px 6px 0px #ff6600;
+    border-color: #ff6600;
+}
+
+.table-radius{
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px 0px rgba(1, 1, 1, 1);
+}
+
+.firstRowTable{
+    border-top: none !important;
+}
+
+.edit-account i {
+    color: orange;
+}
+
+.edit-account i:hover {
+    color: #00b3b3;
+    cursor: pointer;
+}
+
+.profile-thanks {
+    font-family: Impact; 
+    font-size: 25px;
+}
+
+@media (min-width: 576px){
+    .profile-thanks {
+        font-family: Impact; 
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px){
+    .profile-thanks {
+        font-family: Impact; 
+        font-size: 40px;
+    }
+}
